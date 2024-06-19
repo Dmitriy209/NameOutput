@@ -6,20 +6,16 @@ namespace NameOutput
     {
         static void Main(string[] args)
         {
-            int symbolsLength = 2;
-
             Console.WriteLine("Введите символ:");
-            char symbol = Convert.ToChar(Console.ReadLine());
+            char symbol = Console.ReadKey(true).KeyChar;
 
             Console.WriteLine("Введите имя:");
             string name = Console.ReadLine();
 
             string lastLines = "";
             string middleLine = Convert.ToString(symbol) + name + Convert.ToString(symbol);
-            
-            int lineLength = name.Length + symbolsLength;
-
-            for (int i = 0; i < lineLength; i++)
+           
+            for (int i = 0; i < middleLine.Length; i++)
             {
                 lastLines += Convert.ToString(symbol);
             }
