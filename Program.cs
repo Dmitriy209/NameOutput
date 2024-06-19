@@ -13,16 +13,16 @@ namespace NameOutput
             string name = Console.ReadLine();
 
             string lastLines = "";
-            string middleLine = Convert.ToString(symbol) + name + Convert.ToString(symbol);
-           
+            string middleLine = $"{symbol}{name}{symbol}";
+
             for (int i = 0; i < middleLine.Length; i++)
             {
                 lastLines += Convert.ToString(symbol);
             }
 
-            Console.WriteLine(lastLines);
-            Console.WriteLine(middleLine);
-            Console.WriteLine(lastLines);
+            Console.WriteLine($"{lastLines}\n" +
+                $"{middleLine}\n" +
+                $"{lastLines}");
         }
     }
 }
